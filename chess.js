@@ -13,21 +13,34 @@ const pieces = [
 
 let selectedSquare = null;
 
+function isWhitePiece(piece) {
+  return "♙♖♘♗♕♔".includes(piece);
+}
+
 function drawBoard() {
   boardElement.innerHTML = "";
+
   pieces.forEach((piece, i) => {
     const square = document.createElement("div");
-    square.className = "square " + ((Math.floor(i / 8) + i) % 2 ? "black" : "white");
+    const isDark = (Math.floor(i / 8) + i) % 2;
+
+    square.className = "square " + (isDark ? "black" : "white");
     square.textContent = piece;
-    square.onclick = () => selectSquare(i, square);
+
+    if (piece && isWhitePiece(piece)) {
+      square.classList.add("white-piece");
+    } else if (piece) {
+      square.classList.add("black-piece");
+    }
+
+    square.onclick = () => selectSquare(i);
     boardElement.appendChild(square);
   });
 }
 
-function selectSquare(index, square) {
+function selectSquare(index) {
   if (selectedSquare === null && pieces[index] !== "") {
     selectedSquare = index;
-    square.classList.add("selected");
   } else if (selectedSquare !== null) {
     pieces[index] = pieces[selectedSquare];
     pieces[selectedSquare] = "";
