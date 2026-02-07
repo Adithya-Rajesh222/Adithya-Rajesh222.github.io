@@ -1,4 +1,4 @@
-alert("puzzles.js is working");
+alert("JS CONNECTED");
 const boardElement = document.getElementById("board");
 
 /*
