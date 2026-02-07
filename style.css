@@ -26,7 +26,33 @@ body {
 .white {
   background: #eee;
 }
+.board {
+  width: 320px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin: auto;
+}
 
+.square {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white { background: #f0f0f0; }
+.black { background: #666; }
+
+.white-piece {
+  color: white;
+  text-shadow: 0 0 2px black;
+}
+
+.black-piece {
+  color: black;
+  text-shadow: 0 0 2px white;
+}
 .black {
   background: #666;
   color: white;
