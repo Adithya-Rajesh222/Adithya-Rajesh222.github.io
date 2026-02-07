@@ -1,20 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ChessMaster – Puzzles</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+const boardElement = document.getElementById("board");
 
-<body>
-  <h1 style="text-align:center;color:white;">♟ Chess Puzzles</h1>
+const pieces = [
+  "♜","♞","♝","♛","♚","♝","♞","♜",
+  "♟","♟","♟","♟","♟","♟","♟","♟",
+  "","","","","","","","",
+  "","","","","","","","",
+  "","","","","","","","",
+  "","","","","","","","",
+  "♙","♙","♙","♙","♙","♙","♙","♙",
+  "♖","♘","♗","♕","♔","♗","♘","♖"
+];
 
-  <!-- THIS is the board -->
-  <div id="board"></div>
+function isWhitePiece(piece) {
+  return "♙♖♘♗♕♔".includes(piece);
+}
 
-  <p style="text-align:center;color:gray;">
-    Mate in 1 – White to move
-  </p>
+function drawBoard() {
+  boardElement.innerHTML = "";
 
-  <script src="puzzles.js"></script>
-</body>
-</html>
+  pieces.forEach((piece, i) => {
+    const square = document.createElement("div");
+    const isDark = (Math.floor(i / 8) + i) % 2;
+
+    square.className = "square " + (isDark ? "black" : "white");
+    square.textContent = piece;
+
+    if (piece && isWhitePiece(piece)) {
+      square.classList.add("white-piece");
+    } else if (piece) {
+      square.classList.add("black-piece");
+    }
+
+    boardElement.appendChild(square);
+  });
+}
+
+drawBoard();
