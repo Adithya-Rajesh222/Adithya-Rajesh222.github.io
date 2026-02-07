@@ -1,52 +1,25 @@
+body {
+  background: red;
+}
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChessMaster</title>
-    <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      margin-top: 40px;
-      font-size: 36px;
-    }
-    button {
-      width: 220px;
-      padding: 15px;
-      margin: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      background: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #45a049;
-    }
-  </style>
+  <title>Chess Puzzles</title>
+
+  <!-- CONNECT CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>ChessMaster</h1>
 
+  <h1>♟ Chess Puzzles</h1>
+  <h3>Mate in 1 – White to move</h3>
+
+  <!-- THIS IS THE BOARD -->
   <div id="board"></div>
 
-  <script src="chess.js"></script>
-</body>
-  <h1>♟ ChessMaster</h1>
-  <p>Learn • Practice • Improve</p>
+  <!-- CONNECT JAVASCRIPT -->
+  <script src="script.js"></script>
 
-  <button onclick="location.href='play.html'">Play vs AI</button><br>
-  <button onclick="location.href='lessons.html'">Lessons</button><br>
-  <button onclick="location.href='puzzles.html'">Puzzles</button><br>
-  <button onclick="location.href='studies.html'">Studies</button>
 </body>
 </html>
