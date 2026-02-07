@@ -76,3 +76,9 @@ body {
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
 }
+.square {
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
