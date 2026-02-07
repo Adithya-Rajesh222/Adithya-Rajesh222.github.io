@@ -44,3 +44,18 @@ body {
   background: #666;
   color: #fff;
 }
+.white-piece {
+  color: #ffffff;
+}
+
+.black-piece {
+  color: #000000;
+}
+
+.white {
+  background: #f0f0f0;
+}
+
+.black {
+  background: #666;
+}
