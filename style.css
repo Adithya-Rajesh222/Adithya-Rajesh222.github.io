@@ -76,3 +76,22 @@ body {
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
 }
+.white-piece {
+  color: #ffffff;
+  text-shadow: 0 0 2px #000;
+}
+
+.black-piece {
+  color: #000000;
+  text-shadow: 0 0 2px #fff;
+}
+
+.square {
+  font-size: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+function isWhitePiece(piece) {
+  return "♙♖♘♗♕♔".includes(piece);
+}
