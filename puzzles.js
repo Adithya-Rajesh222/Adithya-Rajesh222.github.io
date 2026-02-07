@@ -1,3 +1,4 @@
+alert("puzzles.js is working");
 const boardElement = document.getElementById("board");
 
 /*
