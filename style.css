@@ -1,9 +1,11 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: #f0f0f0;
+  background: #111;
+  color: white;
 }
 
+/* Board container */
 #board {
   display: grid;
   grid-template-columns: repeat(8, 60px);
@@ -13,71 +15,18 @@ body {
   border: 2px solid black;
 }
 
+/* Board squares */
 .square {
   width: 60px;
   height: 60px;
+  font-size: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
   cursor: pointer;
 }
 
-.white {
-  background: #eee;
-}
-.board {
-  width: 320px;
-  height: 320px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  margin: auto;
-}
-
-.square {
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.white { background: #f0f0f0; }
-.black { background: #666; }
-
-.white-piece {
-  color: white;
-  text-shadow: 0 0 2px black;
-}
-
-.black-piece {
-  color: black;
-  text-shadow: 0 0 2px white;
-}
-.black {
-  background: #666;
-  color: white;
-}
-
-.selected {
-  outline: 3px solid red;
-}
-.white {
-  background: #f0f0f0;
-  color: #000;
-}
-
-.black {
-  background: #666;
-  color: #fff;
-}
-.white-piece {
-  color: #ffffff;
-}
-
-.black-piece {
-  color: #000000;
-}
-
+/* Square colors */
 .white {
   background: #f0f0f0;
 }
@@ -85,8 +34,10 @@ body {
 .black {
   background: #666;
 }
+
+/* Piece colors */
 .white-piece {
-  color: #ffffff;
+  color: white;
   text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
@@ -95,29 +46,15 @@ body {
 }
 
 .black-piece {
-  color: #000000;
+  color: black;
   text-shadow:
     -1px -1px 0 #fff,
      1px -1px 0 #fff,
     -1px  1px 0 #fff,
      1px  1px 0 #fff;
 }
-.white-piece {
-  color: #ffffff;
-  text-shadow: 0 0 2px #000;
-}
 
-.black-piece {
-  color: #000000;
-  text-shadow: 0 0 2px #fff;
-}
-
-.square {
-  font-size: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-function isWhitePiece(piece) {
-  return "♙♖♘♗♕♔".includes(piece);
+/* Selected square */
+.selected {
+  outline: 3px solid red;
 }
