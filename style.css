@@ -35,3 +35,12 @@ body {
 .selected {
   outline: 3px solid red;
 }
+.white {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.black {
+  background: #666;
+  color: #fff;
+}
