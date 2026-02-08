@@ -1,4 +1,3 @@
-alert("JS CONNECTED");
 const boardElement = document.getElementById("board");
 
 /*
