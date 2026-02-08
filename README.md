@@ -6,7 +6,7 @@
 </head>
 <body style="font-family: Arial; text-align:center; background:#f4f4f4;">
 
-  <h1>♟ ChessMaster</h1>
+  <h1>♟️ ChessMaster</h1>
   <p>Learn chess like a grandmaster</p>
 
   <button onclick="alert('Strategies coming soon!')">
