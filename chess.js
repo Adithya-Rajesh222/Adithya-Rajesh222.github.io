@@ -1,4 +1,5 @@
-4rconst boardElement = document.getElementById("board");
+console.log("chess.js loaded");
+<div id="board"></div>
 
 const pieces = [
   "♜","♞","♝","♛","♚","♝","♞","♜",
