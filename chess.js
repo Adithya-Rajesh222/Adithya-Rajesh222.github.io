@@ -1,4 +1,4 @@
-const boardElement = document.getElementById("board");
+4rconst boardElement = document.getElementById("board");
 
 const pieces = [
   "♜","♞","♝","♛","♚","♝","♞","♜",
@@ -14,19 +14,22 @@ const pieces = [
 let selectedSquare = null;
 
 function isWhitePiece(piece) {
-  return piece.startsWith("🤍");
+  return "♙♖♘♗♕♔".includes(piece);
 }
 
 function drawBoard() {
   boardElement.innerHTML = "";
 
-  pieces.forEach((piece, i) => {
-    const square = document.createElement("div");
-    const isDark = (Math.floor(i / 8) + i) % 2;
+ pieces.forEach((piece, i) => {
+  const square = document.createElement("div");
+  const isDark = (Math.floor(i / 8) + i) % 2;
 
-    square.className = "square " + (isDark ? "black" : "white");
-    square.textContent = piece;
+  square.className = "square " + (isDark ? "black" : "white");
+  square.textContent = piece;
 
+  if (i === selectedSquare) {
+    square.style.outline = "3px solid red";
+  }
     if (piece && isWhitePiece(piece)) {
       square.classList.add("white-piece");
     } else if (piece) {
@@ -45,8 +48,8 @@ function selectSquare(index) {
     pieces[index] = pieces[selectedSquare];
     pieces[selectedSquare] = "";
     selectedSquare = null;
-    drawBoard();
   }
+  drawBoard();
 }
 
 drawBoard();
